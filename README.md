@@ -1,39 +1,23 @@
 # Name of App *(Give your app a short and informative title. Please adhere to our convention of Title Case without hyphens (e.g. My New App))*
 
-MoveApps
+Simple Clustering Method
 
 Github repository: *github.com/yourAccount/Name-of-App* *(provide the link to the repository where the code of the App can be found)*
 
 ## Description
-*Enter here the short description of the App that might also be used when filling out the description during App submission to MoveApps. This text is directly presented to Users that look through the list of Apps when compiling Workflows.*
+A simple clustering method for location-based data.
 
 ## Documentation
-*Enter here a detailed description of your App. What is it intended to be used for. Which steps of analyses are performed and how. Please be explicit about any detail that is important for use and understanding of the App and its outcomes. You might also refer to the sections below.*
+This app will find the nearest neighbor distance for each GPS Point, take the average nearest neighbor distance for the dataset, use that average as the radius of a buffer, buffer each GPS point, and group GPS points together if their buffers overlap. The clusters will then be color-coded and visualized on a simple map. I imagine using it to make observations about or find patterns regarding how an animal is interacting with the landscape.  
 
 ### Application scope
 #### Generality of App usability
-*State here if the App was developed for a specific species, taxon or taxonomic group, or to answer a specific question. How might it influence the scope and utility of the App. This information will help the user to understand why the App might be producing no or odd results.*
+I am designing this app as part of an internship through my university. Truthfully, I have never coded before and am learning as I go. The underlying purpose of this app is to assist in answering location-based questions proposed by the Wisconsin Black Bear Project. So, if this app is producing no or odd results... bear with me (get it?). 
 
-*Examples:*
-
-This App was developed using data of birds. 
-
-This App was developed using data of red deer. 
-
-This App was developed for any taxonomic group. 
-
-This App was developed to identify kill sites, but can probably be used to identify any kind of location clusters like nests, dens or drinking holes.
+This app was designed to analyze black bear movement data, maybe it will also work with other critters.  
 
 #### Required data properties
-*State here the required and/or optimal data properties for this App to perform properly.*
-
-*Examples:*
-
-This App is only applicable to data that reflect range resident behavior. 
-
-The data should have a fix rate of at least 1 location per 30 minutes. 
-
-The App should work for any kind of (location) data.
+This app should work for terrestrial, non-migratory, animal movement data. 
 
 ### Input type
 *Indicate which type of input data the App requires.*
