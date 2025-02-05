@@ -8,7 +8,7 @@ Github repository: *github.com/yourAccount/Name-of-App* *(provide the link to th
 A simple clustering method for location-based data.
 
 ## Documentation
-This app will find the nearest neighbor distance for each GPS Point, take the average nearest neighbor distance for the dataset, use that average as the radius of a buffer, buffer each GPS point, and group GPS points together if their buffers overlap. The clusters will then be color-coded and visualized on a simple map. I imagine using it to make observations about or find patterns regarding how an animal is interacting with the landscape.  
+This app will find the nearest neighbor distance for each GPS Point, take the average nearest neighbor distance for the dataset, use that average as the radius of a buffer, buffer each GPS point, and group GPS points together if their buffers overlap. The clusters will then be color-coded and visualized on a simple map. I imagine using it to make observations about, or find patterns regarding, how an animal is interacting with the landscape.  
 
 ### Application scope
 #### Generality of App usability
