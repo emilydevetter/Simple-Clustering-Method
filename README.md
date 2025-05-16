@@ -1,60 +1,65 @@
-# Simple Clustering Method 
+# Simple Clustering Method
 
-
-Github repository: *github.com/yourAccount/Name-of-App* *(provide the link to the repository where the code of the App can be found)*
+Github repository: *github.com/yourAccount/Name-of-App* *(provide the link to the repository where the code of the App
+can be found)*
 
 ## Description
-A simple clustering method for location-based data.
+
+A simple clustering method for location-based data. Outputs two CSV files that groups GPS point together based on
+avergage nearest neighbor distance.
 
 ## Documentation
-This app will find the nearest neighbor distance for each GPS Point, take the average nearest neighbor distance for the dataset, use that average as the radius of a buffer, buffer each GPS point, and group GPS points together if their buffers overlap. The clusters will then be color-coded and visualized on a simple map. I imagine using it to make observations about, or find patterns regarding, how an animal is interacting with the landscape.  
+
+This app will find the nearest neighbor distance for each GPS Point, take the average nearest neighbor distance for the
+dataset, use that average as the radius of a buffer, buffer each GPS point, and group GPS points together if their
+buffers overlap.
 
 ### Application scope
-#### Generality of App usability
-I am designing this app as part of an internship through my university. Truthfully, I have never coded before and am learning as I go. The underlying purpose of this app is to assist in answering location-based questions proposed by the Wisconsin Black Bear Project. So, if this app is producing no or odd results... bear with me (get it?). 
 
-This app was designed to analyze black bear movement data, maybe it will also work with other critters.  
+#### Generality of App usability
+
+This app was designed for the analysis of black bear movement data associated with the UW- Stevens Point Black Bear
+Project. Compatability with other projects unknown.
 
 #### Required data properties
-This app should work for terrestrial, non-migratory, animal movement data. 
+
+This app should work for terrestrial, non-migratory, animal movement data.
 
 ### Input type
-*Indicate which type of input data the App requires.*
 
-*Example*: `MovingPandas.TrajectoryCollection`
+`MovingPandas.TrajectoryCollection`
 
 ### Output type
-*Indicate which type of output data the App produces to be passed on to subsequent Apps.*
 
-*Example:* `MovingPandas.TrajectoryCollection`
+`MovingPandas.TrajectoryCollection`
 
 ### Artefacts
-*If the App creates artefacts (e.g. csv, pdf, jpeg, shapefiles, etc), please list them here and describe each.*
 
-*Example:* `rest_overview.csv`: csv-file with Table of all rest site properties
+`details.csv`: csv-file that lists rows within the dataframe that are within the average nearest neighbor distance of
+another row of data.
 
-### Settings 
-*Please list and define all settings/parameters that the App requires to be set by the App user, if necessary including their unit. Please first state the Setting name the user encounters in the Settings menu defined in the appspecs.json, and between brackets the argument used in the Python code to be able to identify it quickly in the code if needed.*
+`summary.csv`: csv-file that tacks-on an additional column of data that groups rows of data that are within the average
+nearest neighbor distance together with a number.
 
-*Example:* `Radius of resting site` (radius): Defined radius the animal has to stay in for a given duration of time for it to be considered resting site. Unit: `metres`.
+### Settings
+
+`Timestamp Range` (Timestamprange): The period of time you are interested in clustering points together.
 
 ### Changes in output data
-*Specify here how and if the App modifies the input data. Describe clearly what e.g. each additional column means.*
 
-*Examples:*
+This app produces an entirely new summary csv-file that includes `Row`, `NeighborCount`, and `NeighborRows` columns and
+does not include the inputed dataframe.
 
-The App adds to the input data the columns `Max_dist` and `Avg_dist`. They contain the maximum distance to the provided focal location and the average distance to it over all locations. 
-
-The App filterers the input data as selected by the user. 
-
-The output data is the outcome of the model applied to the input data. 
-
-The input data remains unchanged.
+This app produces a details csv-file that tacks on a `CenterRow` column that groups GPS points together by assigning a
+number to GPS points that fall within the average nearest neighbor distance of other GPS points.
 
 ### Most common errors
-*Please describe shortly what most common errors of the App can be, how they occur and best ways of solving them.*
 
-### Null or error handling
-*Please indicate for each setting as well as the input data which behaviour the App is supposed to show in case of errors or NULL values/input. Please also add notes of possible errors that can happen if settings/parameters are improperly set and any other important information that you find the user should be aware of.*
+Code written with specific column titles in mind. "Latitude[deg], Longitude[deg]" are transformed into "lat and lon".
+This could make the app incompatible with some datasets.
 
-*Example:* **Setting `radius`:** If no radius AND no duration are given, the input data set is returned with a warning. If no radius is given (NULL), but a duration is defined then a default radius of 1000m = 1km is set. 
+### Null or err[app-configuration.json](app-configuration.json)or handling
+
+**Setting `Timestamp Range`:** If no dates are specified, the app will run the entire dataset, which may produce an
+inaccurate average nearest neighbor distance and therefore illogical clusters if the animal of interest was relocated by
+humans due to a nusiance concern or hibernating.  
