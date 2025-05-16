@@ -1,27 +1,95 @@
 {
-  "version": "1.2",
+  "version": "1.0",
   "settings": [
     {
-      "id": "app-name",
-      "name": "App Name",
-      "description": "You can personalize the app name.",
-      "default": "Python SDK",
-      "type": "STRING"
-    },
-    {
-      "id": "year",
-      "name": "The year",
-      "description": "Enter the year for which you want to keep the data",
-      "defaultValue": 1960,
-      "type": "INTEGER"
-    },
-    {
-      "id": "auxiliary-file-a",
-      "name": "Your message",
-      "description": "You can personalize the app by providing a file.",
-      "type": "USER_FILE"
+      "id": "Timestamprange",
+      "name": "Timestamp Range",
+      "description": "Select the period of time you want to cluster.",
+      "defaultValue": null,
+      "type": "INSTANT"
     }
   ],
+ "dependencies": {
+    "Python": [
+      {
+        "name": "certifi",
+        "version": "2025.1.31"
+      },
+      {
+        "name": "charset-normalizer",
+	"version": "3.4.1"
+      },  
+      {
+        "name": "idna",
+	"version": "3.10"
+      },
+      {
+        "name": "joblib",
+	"version": "1.4.2"
+      },
+      {
+        "name": "numpy",
+	"version": "2.2.4"
+      },
+      {
+        "name": "numy.py",
+	"version": "0.1"
+      },
+      {
+        "name": "panda",
+	"version": "0.3.1"
+      },
+      {
+        "name": "pandas",
+	"version": "2.2.3"
+      },
+      {
+        "name": "pip",
+	"version": "23.2.1"
+      },
+      {
+        "name": "python-dateutil",
+	"version": "2.9.0.post0"
+      },
+      {
+        "name": "pytz",
+	"version": "2025.2"
+      },
+      {
+        "name": "requests",
+	"version": "2.32.3"
+      },
+      {
+        "name": "scikit-learn",
+	"version": "1.6.1"
+      },
+      {
+        "name": "scipy",
+	"version": "1.15.2"
+      },
+      {
+        "name": "setuptools",
+	"version": "78.1.0"
+      },
+      {
+        "name": "six",
+	"version": "1.17.0"
+      },
+      {
+        "name": "threadpoolctl",
+	"version": "3.6.0"
+      },
+      {
+        "name": "tzdata",
+	"version": "2025.2"
+      },
+      {
+        "name": "urllib3",
+	"version": "2.3.0"
+      }
+    ]
+  }
+}
   "providedAppFiles": [
     {
       "settingId": "auxiliary-file-a",
@@ -29,40 +97,70 @@
     }
   ],
   "license": {
-    "key": "MIT"
+    "key": "GPL-3.0-or-later"
   },
   "language": "eng",
   "keywords": [
-    "example",
-    "template"
+    "movement",
+    "cluster",
+    "locational",
+    "GPS"
   ],
   "people": [
     {
-      "firstName": "Charles",
+      "firstName": "Nik",
       "middleInitials": null,
-      "lastName": "Darwin",
-      "email": "creator@example.com",
+      "lastName": "Butz",
+      "email": "nbutz@uwsp.edu",
       "roles": [
-        "author",
-        "creator"
+        "Compiler",
+        "Author"
       ],
       "orcid": null,
-      "affiliation": null,
+      "affiliation": University of Wisconsin- Stevens Point,
+      "affiliationRor": null
+    },
+    {
+      "firstName": "Emily",
+      "middleInitials": null,
+      "lastName": "DeVetter",
+      "email": "emilydevetter@gmail.com",
+      "roles": [
+        "Creator",
+        "Author"
+      ],
+      "orcid": null,
+      "affiliation": University of Wisconsin- Stevens Point,
+      "affiliationRor": null
+    },
+    {
+      "firstName": "Cady",
+      "middleInitials": null,
+      "lastName": "Sartini",
+      "email": "csartini@uwsp.edu",
+      "roles": [
+        "Data Contributor"
+      ],
+      "orcid": null,
+      "affiliation": University of Wisconsin- Stevens Point,
       "affiliationRor": null
     }
   ],
   "funding": [
     {
-      "name": "funder name",
-      "comment": "grant for App"
+      "name": "Pathways Internship Program",
+      "comment": "Contribution towards the recruitment and retention of undergraduate students through high-level on-campus internship experiences."
     }
   ],
   "references": [
     {
-      "type": "IsDescribedBy",
-      "note": "Darwin, C. 1900. The creation. Journal XY. 1-2",
-      "url": "https://anylink.xyz"
+      "type": "IsCompliedBy",
+      "note": "Butz, N. 2025.",
+    }
+    {
+      "type": "IsCitedBy",
+      "note": "Esri, ArcGIS Pro. 2023",
     }
   ]
-}
 
+}
