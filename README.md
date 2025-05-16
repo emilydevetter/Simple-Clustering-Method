@@ -6,7 +6,7 @@ can be found)*
 ## Description
 
 A simple clustering method for location-based data. Outputs two CSV files that groups GPS point together based on
-avergage nearest neighbor distance.
+average nearest neighbor distance.
 
 ## Documentation
 
