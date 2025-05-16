@@ -9,3 +9,21 @@ dependencies:
   - pluggy
   - python-dotenv
   - deprecated
+  - certifi
+  - charset-normalizer
+  - idna
+  - joblib
+  - numpy
+  - numy.py
+  - panda
+  - pip
+  - python-dateutil
+  - pytz
+  - requests
+  - scikit-learn
+  - scipy
+  - setuptools
+  - six
+  - threadpoolctl
+  - tzdata
+  - urllib3
